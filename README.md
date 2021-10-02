@@ -18,7 +18,7 @@
 Установка myHDL подробно описана на сайте библиотеки 
 
 При использовании Python версии 3.9.7 на 2.10.2021 (остальные версии Python не были подвержены проверке) существует проблема конвертации исходного кода в verilog или VHDL при использовании массивов, автором проблема была решена изменением содержимого файла _analyze.py
-```python3
+```git
 diff --git a/myhdl/conversion/_analyze.py b/myhdl/conversion/_analyze.py
 index 9ad1111..9adcb08 100644
 --- a/myhdl/conversion/_analyze.py
