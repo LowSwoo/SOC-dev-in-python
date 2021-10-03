@@ -1,5 +1,5 @@
-Analysis & Elaboration report for top
-Mon Sep 27 10:38:49 2021
+Analysis & Synthesis report for top
+Sat Oct  2 23:29:48 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,10 +7,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -35,45 +41,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Sep 27 10:38:49 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct  2 23:29:48 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 1,859                                       ;
+;     Total combinational functions  ; 835                                         ;
+;     Dedicated logic registers      ; 1,024                                       ;
+; Total registers                    ; 1024                                        ;
+; Total pins                         ; 27                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -158,27 +148,148 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; ../pck_myhdl_011.vhd             ; yes             ; User VHDL File  ; /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/pck_myhdl_011.vhd ;         ;
+; ../top.vhd                       ; yes             ; User VHDL File  ; /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/top.vhd           ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,859     ;
+;                                             ;           ;
+; Total combinational functions               ; 835       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 798       ;
+;     -- 3 input functions                    ; 17        ;
+;     -- <=2 input functions                  ; 20        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 835       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 1024      ;
+;     -- Dedicated logic registers            ; 1024      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 27        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1024      ;
+; Total fan-out                               ; 6390      ;
+; Average fan-out                             ; 3.34      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |top                       ; 835 (835)           ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 27   ; 0            ; 0          ; |top                ; top         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1024  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1024  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 1024                        ;
+;     ENA               ; 1024                        ;
+; cycloneiii_lcell_comb ; 835                         ;
+;     normal            ; 835                         ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 798                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 5.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 27 10:38:39 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top --analysis_and_elaboration
+    Info: Processing started: Sat Oct  2 23:29:31 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 0 entities, in source file /home/skynet/Documents/Python HDL/test/pck_myhdl_011.vhd
-    Info (12022): Found design unit 1: pck_myhdl_011 File: /home/skynet/Documents/Python HDL/test/pck_myhdl_011.vhd Line: 10
-    Info (12022): Found design unit 2: pck_myhdl_011-body File: /home/skynet/Documents/Python HDL/test/pck_myhdl_011.vhd Line: 49
-Info (12021): Found 2 design units, including 1 entities, in source file /home/skynet/Documents/Python HDL/test/top.vhd
-    Info (12022): Found design unit 1: top-MyHDL File: /home/skynet/Documents/Python HDL/test/top.vhd Line: 31
-    Info (12023): Found entity 1: top File: /home/skynet/Documents/Python HDL/test/top.vhd Line: 13
+Info (12021): Found 2 design units, including 0 entities, in source file /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/pck_myhdl_011.vhd
+    Info (12022): Found design unit 1: pck_myhdl_011 File: /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/pck_myhdl_011.vhd Line: 10
+    Info (12022): Found design unit 2: pck_myhdl_011-body File: /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/pck_myhdl_011.vhd Line: 49
+Info (12021): Found 2 design units, including 1 entities, in source file /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/top.vhd
+    Info (12022): Found design unit 1: top-MyHDL File: /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/top.vhd Line: 31
+    Info (12023): Found entity 1: top File: /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/top.vhd Line: 13
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 727 megabytes
-    Info: Processing ended: Mon Sep 27 10:38:49 2021
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "RAM0_mem" is uninferred due to asynchronous read logic File: /home/skynet/Documents/work/koyankin/SOC dev in python/examples/myHDL/top.vhd Line: 38
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1886 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 1859 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 419 megabytes
+    Info: Processing ended: Sat Oct  2 23:29:48 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:24
 
 
